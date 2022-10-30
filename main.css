@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+b {
+  font-weight: 500;
+}
+header,
+input[type="submit"],
+button {
+  color: hsl(0, 0%, 100%);
+}
+section {
+  padding: 0 30px;
+}
+label {
+  margin-bottom: 20px;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid hsl(270, 3%, 87%);
+  color: hsl(278, 68%, 11%);
+  margin-top: 5px;
+}
+input[type="text"]:focus {
+  outline: none;
+  border: 1px solid hsl(278, 94%, 30%);
+}
+input[type="submit"],
+button {
+  width: 100%;
+  padding: 15px;
+  background-color: hsl(278, 68%, 11%);
+  border-radius: 10px;
+  border: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+.success {
+  text-align: center;
+}
+.mt-1 {
+  margin: 16px 0 0;
+}
+.mt-2 {
+  margin: 32px 0 0;
+}
+.color-light-grayish {
+  color: hsl(270, 3%, 87%);
+}
+.color-dark-grayish {
+  color: hsl(279, 6%, 55%);
+}
+.color-very-dark-grayish {
+  color: hsl(278, 68%, 11%);
+}
+.d-none {
+  display: none;
+}
+.d-block {
+  display: block;
+}
+.t-danger {
+  color: hsl(0, 100%, 66%);
+}
+.b-danger {
+  border: 1px solid hsl(0, 100%, 66%) !important;
+}
+::-webkit-input-placeholder {
+  /* Edge */
+  color: hsl(270, 3%, 87%);
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: hsl(270, 3%, 87%) red;
+}
+
+::placeholder {
+  color: hsl(270, 3%, 87%);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.back-card,
+.bc-pin,
+.front-card,
+.fc-logo,
+.fc-card-num,
+.fc-card-name,
+.fc-card-exp {
+  position: absolute;
+}
+
+.bg,
+.bg img,
+.back-card img,
+.fc-logo img,
+.fc-card-num,
+#formSection {
+  width: 100%;
+}
+.bg {
+  position: relative;
+}
+
+.back-card {
+  top: 20px;
+  right: 20px;
+  left: 50px;
+}
+
+.bc-pin {
+  top: calc(50% - 15px);
+  right: 10%;
+}
+
+.front-card {
+  top: 50%;
+  left: 20px;
+  right: 50px;
+}
+
+.fc-logo,
+.fc-card-num,
+.fc-card-name,
+.fc-card-exp {
+  padding-left: 20px;
+}
+
+.fc-logo {
+  top: 20px;
+  width: 60px;
+}
+
+.fc-card-num {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
+  text-align: justify;
+  font-size: 18px;
+  top: 50%;
+}
+
+.fc-card-name,
+.fc-card-exp {
+  bottom: 25px;
+}
+
+.fc-card-exp {
+  right: 20px;
+}
+
+.sep {
+  border: 0;
+  margin-bottom: 25%;
+}
+.field {
+  margin-top: 10px;
+}
+
+.columns {
+  display: flex;
+  gap: 10px;
+}
+.column {
+  flex: 1;
+}
+
+.bg-image-desk {
+  display: none;
+}
+
+.container {
+  max-width: 375px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 100%;
+  }
+  #formSection,
+  #header,
+  #success,
+  .sep {
+    float: left;
+  }
+  #formSection,
+  #success {
+    width: 50%;
+    height: 100vh;
+    
+  }
+  #formSection form, #div-success{
+    padding-right: 150px;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  #header {
+    width: 30%;
+  }
+  .sep {
+    width: 20%;
+  }
+
+  .bg-image-mobile {
+    display: none;
+  }
+  .bg-image-desk {
+    display: block;
+    height: 100vh;
+    object-fit: cover;
+  }
+  .back-card {
+    top: 53%;
+    left: 40%;
+    right: -35%;
+  }
+  .front-card {
+    top: 15%;
+    left: 25%;
+    right: -20%;
+  }
+}

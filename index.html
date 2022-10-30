@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header id="header">
+        <div class="bg">
+          <img
+            src="images/bg-main-mobile.png"
+            alt="bg-main-mobile"
+            class="bg-image-mobile"
+          />
+          <img
+            src="images/bg-main-desktop.png"
+            alt="bg-main-desktop"
+            class="bg-image-desk"
+          />
+          <div class="back-card">
+            <img src="images/bg-card-back.png" alt="bg-card-back" />
+            <p class="bc-pin" id="c-ccvc"></p>
+          </div>
+          <div class="front-card">
+            <span class="fc-logo">
+              <img src="images/card-logo.svg" alt="" />
+            </span>
+            <div class="fc-card-num" id="c-cnumber"></div>
+            <p class="fc-card-name" id="c-chname"></p>
+            <div class="fc-card-exp">
+              <span id="c-cexpdatemm"></span>
+              <span>/</span>
+              <span id="c-cexpdateyy"></span>
+            </div>
+            <img src="images/bg-card-front.png" alt="bg-card-front" />
+          </div>
+        </div>
+      </header>
+      <hr class="sep" />
+      <section id="formSection">
+        <form name="cardForm" autocomplete="off" id="cardForm">
+          <div class="field">
+            <label for="chname"><b>Cardholder Name</b></label>
+            <input
+              type="text"
+              id="chname"
+              name="chname"
+              placeholder="e.g. Jane Appleseed"
+              maxlength="25"
+            />
+            <small class="d-none t-danger" id="e-chname"
+              >Max length 25 characters</small
+            >
+          </div>
+          <div class="field">
+            <label for="cnumber"><b>Card Number</b> </label>
+            <input
+              type="text"
+              id="cnumber"
+              name="cnumber"
+              placeholder="e.g. 1234 5678 9123 0000"
+              maxlength="16"
+            />
+            <small class="d-none t-danger" id="e-cnumber"
+              >Wrong format, number only. 16 characters</small
+            >
+          </div>
+          <div class="columns">
+            <div class="column">
+              <div class="field">
+                <label for="cexpdate"><b>Exp. Date (MM/YY)</b> </label>
+                <div class="columns">
+                  <div class="column">
+                    <input
+                      type="text"
+                      id="cexpdatemm"
+                      name="cexpdatemm"
+                      placeholder="MM"
+                      maxlength="2"
+                    />
+                    <small class="d-none t-danger" id="e-cexpdatemm"
+                      >Can't be blank. Number</small
+                    >
+                  </div>
+                  <div class="column">
+                    <input
+                      type="text"
+                      id="cexpdateyy"
+                      name="cexpdateyy"
+                      placeholder="YY"
+                      maxlength="2"
+                    />
+                    <small class="d-none t-danger" id="e-cexpdateyy"
+                      >Can't be blank. Number</small
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="field">
+                <label for="ccvc"><b>CVC</b> </label>
+                <input
+                  type="text"
+                  id="ccvc"
+                  name="ccvc"
+                  placeholder="e.g. 123"
+                  maxlength="3"
+                />
+                <small class="d-none t-danger" id="e-ccvc"
+                  >Can't be blank. Numbers</small
+                >
+              </div>
+            </div>
+          </div>
+          <input class="mt-1" type="submit" value="Confirm" />
+        </form>
+      </section>
+      <section class="success d-none" id="success">
+        <div id="div-success">
+          <div>
+            <img src="images/icon-complete.svg" alt="icon-complete" />
+          </div>
+          <h1 class="mt-2">THANK YOU!</h1>
+          <p class="mt-1 color-dark-grayish">
+            <b> We've added your card details </b>
+          </p>
+          <button
+            class="mt-2"
+            type="button"
+            id="successContinue"
+            onclick="onSuccessContinue()"
+          >
+            Continue
+          </button>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://github.com/alvarezht">Herbert Alvarez</a>.
+      </div>
+    </footer>
+    <!--  -->
+    <script src="main.js"></script>
+  </body>
+</html>
